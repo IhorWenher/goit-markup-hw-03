@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   --primary-text-color: #757575;
   --primary-title-color: #212121;
@@ -37,6 +47,8 @@ h3 {
 }
 
 li {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -48,21 +60,19 @@ a {
 
 .page-header {
   display: flex;
+  background-color: #ccc;
 }
 
-.logo {
-  color: var(--primary-title-color);
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  font-size: 26px;
-  letter-spacing: 0.03em;
-
+.container {
   display: flex;
-}
+  align-items: center;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 
-.logo-beginning {
-  color: var(--accent-color);
+  background-color: var(--primary-bg-color);
 }
 
 .navigation {
@@ -70,18 +80,40 @@ a {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+
+  color: var(--primary-title-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+}
+
+.logo-beginning {
+  color: var(--accent-color);
+}
+
 .site-nav {
   display: flex;
   align-items: center;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 93px;
 }
 
-.site-nav li {
-  margin-right: 40px;
+.site-nav .item + .item {
+  margin-left: 50px;
 }
 
 .site-nav .list-item {
-  color: var(--primary-title-color);
+  display: block;
   font-weight: 500;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-title-color);
 }
 
 .list-item:hover,
@@ -94,22 +126,22 @@ a {
 .communication {
   display: flex;
   align-items: center;
+
+  margin-left: auto;
 }
 
-.mail {
+.communication .item + .item {
+  margin-left: 50px;
+}
+
+.mail-phone {
   color: var(--primary-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.mail:hover,
-.mail:focus {
-  color: var(--accent-color);
-}
-
-.phone {
-  color: var(--primary-text-color);
-}
-.phone:hover,
-.phone:focus {
+.mail-phone:hover,
+.mail-phone:focus {
   color: var(--accent-color);
 }
 
@@ -117,19 +149,32 @@ a {
 
 .hero {
   background-color: var(--alternative-bg-color);
+  text-align: center;
 }
 
-.hero > .slogan {
+.slogan {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+
   color: var(--primary-bg-color);
   font-weight: 900;
   font-size: 44px;
-  text-align: center;
   line-height: 1.4;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
-.hero > .button {
+.button {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 10px 32px;
+  padding-right: 32px;
+  border-radius: 4px;
+
+  min-width: 200px;
+
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
   text-align: center;
@@ -139,7 +184,16 @@ a {
   letter-spacing: 0.06em;
 }
 
+.button:hover {
+  background-color: var(--accent-color);
+}
+
 /* Преимущества*/
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .feature-description {
   font-style: normal;
@@ -184,7 +238,32 @@ a {
 
 /*Портфолио*/
 
-.button {
+.portfolio-container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.project-item {
+  width: calc((100%-60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.examples-list .button {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -246,7 +325,7 @@ a {
   letter-spacing: 0.03em;
 }
 
-.contact .mail .contact .phone {
+.contact .mail-phone {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   line-height: 1.7;
