@@ -147,6 +147,8 @@ p {
 .hero {
   background-color: var(--alternative-bg-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .slogan {
@@ -192,6 +194,11 @@ p {
 
 /* Преимущества*/
 
+.features {
+  background-color: var(--primary-bg-color);
+  padding-top: 94px;
+}
+
 .features-container {
   display: flex;
   flex-direction: column;
@@ -200,7 +207,10 @@ p {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 94px;
+}
+
+.features-container .title {
+  display: none;
 }
 
 .features-list {
@@ -232,6 +242,12 @@ p {
 
 /*Чем занимаемся*/
 
+.activitys {
+  background-color: var(--primary-bg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .activitys-container {
   display: flex;
   flex-direction: column;
@@ -240,7 +256,6 @@ p {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 94px;
 }
 
 .activity-list {
@@ -258,6 +273,8 @@ p {
 
 .page-team {
   background-color: var(--section-bg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-container {
@@ -268,11 +285,6 @@ p {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 94px;
-}
-
-.team-title {
-  margin-top: 94px;
 }
 
 .emloyees-list {
@@ -280,7 +292,6 @@ p {
   padding: 0;
   margin: 0;
   margin-top: 50px;
-  margin-bottom: 94px;
 }
 
 .emloyees-list .employee-item + .employee-item {
@@ -290,6 +301,7 @@ p {
 .employee-item {
   display: block;
   background-color: var(--primary-bg-color);
+  padding-bottom: 30px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -331,7 +343,6 @@ p {
 .employee-position {
   margin: 0;
   margin-top: 10px;
-  margin-bottom: 30px;
 
   color: var(--primary-text-color);
   font-style: normal;
@@ -346,6 +357,11 @@ p {
 
 .page-header.portfolio {
   border-bottom: 1px solid #ececec;
+}
+
+.portfolio-section {
+  padding-top: 94px;
+  padding-bottom: 109px;
 }
 
 .portfolio-container {
@@ -368,6 +384,7 @@ p {
   margin: 0;
   padding: 0;
   text-align: center;
+  display: none;
 }
 
 .examples-list {
@@ -477,6 +494,8 @@ p {
 
 .page-footer {
   background-color: var(--alternative-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-container {
@@ -491,13 +510,7 @@ p {
   margin-left: auto;
 }
 
-.page-footer.portfolio {
-  margin-top: 109px;
-}
-
 .footer-logo {
-  margin-top: 60px;
-
   font-family: Raleway, sans-serif;
   color: var(--primary-bg-color);
   font-weight: 700;
@@ -509,7 +522,6 @@ p {
 .contact {
   margin: 0;
   margin-top: 20px;
-  margin-bottom: 60px;
   padding: 0;
 
   color: var(--primary-bg-color);
